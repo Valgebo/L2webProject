@@ -23,7 +23,79 @@
             <a href="./about.html">About us</a>
         </nav>
     </header>
+    <body>
+        
+        <h2>Event Sign-Up Form</h2>
+        <form id="dataForm">
+            <div>
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div>
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div>
+                <label>Events:</label>
+                <div>
+                    <input type="checkbox" id="event1" name="event1" value="true" required>
+                    <label for="event1">Event 1</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="event2" name="event2" value="true">
+                    <label for="event2">Event 2</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="event3" name="event3" value="true">
+                    <label for="event3">Event 3</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="event4" name="event4" value="true">
+                    <label for="event4">Event 4</label>
+                </div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    
+        <script>
+            document.getElementById('dataForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const form = document.getElementById('dataForm');
+                const formData = new FormData(form);
+    
+                // Set checkbox values to "true" if checked, "false" if not checked
+                const checkboxes = form.querySelectorAll('input[type="checkbox"]');
+                checkboxes.forEach(checkbox => {
+                    formData.set(checkbox.name, checkbox.checked ? 'true' : 'false');
+                });
+    
+                // Convert FormData to plain object
+                const data = {};
+                formData.forEach((value, key) => {
+                    data[key] = value;
+                });
+    
+                // Log the form data to the console
+                console.log('Form Data:', data);
+    
 
+                
+                // Send the form data to the Google Apps Script
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbyFebao03GwVQ1j5QGIJzNh-egLbKXRoFKNkyIlY4zFy-w_swAR5W9a4PtLURoCaSw5/exec'; // Replace with your Google Apps Script URL
+                fetch(scriptURL, { method: 'POST', body: data })
+                    .then(response => console.log('Form submitted successfully!', response))
+                    .catch(error => console.error('Error submitting form!', error));
+            });
+        </script>
+    
     <footer>
         <p>2024 LEBRAS Valentin ROUGIER Jules</p>
         <a href="https://karminecorp.fr">Find out more ?</a>
