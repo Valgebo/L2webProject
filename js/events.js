@@ -29,7 +29,7 @@ function handleFormSubmit(e) {
     console.log('Form Data:', data);
 
     // Send the form data to the Google Apps Script
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyFebao03GwVQ1j5QGIJzNh-egLbKXRoFKNkyIlY4zFy-w_swAR5W9a4PtLURoCaSw5/exec'; // Replace with your Google Apps Script URL
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwP88e4TaU2-8vvViWSmWOT5CIFGvKr_d4l5bRK--R8HxKKDppsbJXGq2JSbk6-S0_b/exec'; // Replace with your Google Apps Script URL
     fetch(scriptURL, { 
         method: 'POST', 
         body: JSON.stringify(data), 

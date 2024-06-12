@@ -1,0 +1,240 @@
+body {
+    background-color: rgb(66, 68, 70);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+header {
+    padding: 0;
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+    background-image: url(https://img.freepik.com/photos-gratuite/mur-briques-bleues_23-2148261968.jpg);
+}
+
+header div {
+    background-image: url(https://img.freepik.com/photos-gratuite/mur-briques-bleues_23-2148261968.jpg);
+}
+
+header img {
+    display: flex;
+    width: 100px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 20px;
+    color: white;
+    background-color: black;
+}
+
+nav a {
+    font-size: larger;
+    color: white;
+}
+
+nav a:hover {
+    background-color: rgb(75, 39, 220);
+    color: white;
+    margin: 0;
+    padding: 2px 0;
+    border-radius: 10px;
+}
+
+#thispage {
+    background-color: rgb(163, 190, 227);
+    color: black;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#definition {
+    background-color: rgb(0, 0, 150);
+    color: aliceblue;
+    padding: 3px;
+}
+
+#definition h1 {
+    padding-left: 2%;
+}
+
+#KCX2 {
+    border-radius: 8px;
+    height: 80%;
+    width: 80%;
+}
+
+#fanbase h2 {
+    background-color: rgb(0, 0, 150);
+    color: white;
+    border-radius: 10px;
+    margin: 2%;
+    padding: 20px;
+}
+
+.lineups {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    width: 70px;
+    height: auto;
+    margin-right: 8px;
+}
+
+.gametitle {
+    font-size: 2em;
+    margin: 0;
+}
+
+#lineups a h1 {
+    background-color: black;
+    color: white;
+    margin: 5px 0;
+    padding: 10px;
+    text-align: center;
+}
+
+#lineups a h3 {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 40%;
+    margin-right: 40%;
+    text-align: center;
+}
+
+#lineups h2 {
+    background-image: linear-gradient(to right, rgb(0, 0, 150), rgb(0, 187, 250));
+    color: white;
+    border-radius: 10px;
+    margin: 2%;
+    padding: 4px;
+    padding-bottom: 10px;
+}
+
+h2.gametitle {
+    margin: 0;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+h2.gametitle .logo {
+    margin-right: 1%;
+}
+
+.lineup_img {
+    display: none;
+    position: relative;
+    width: 1200x;
+    padding-left: 8%;
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+.lineup_img.show {
+    display: block;
+    animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.gametitle {
+    cursor: pointer;
+}
+
+.event-info {
+    display: none;
+    position: absolute;
+    background-color: rgb(0, 187, 250);
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1;
+}
+
+.event:hover .event-info {
+    display: block;
+}
+
+/* New styles for the form */
+form {
+    background-color: rgb(50, 50, 50);
+    border: 2px solid rgb(75, 39, 220);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="checkbox"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: rgb(75, 39, 220);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: rgb(55, 30, 160);
+}
+
+.event {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.event input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+.event-info{
+    text-align: center;
+}
+.event-info img {
+    max-width: 560px;
+}

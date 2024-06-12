@@ -2,7 +2,7 @@
 <html lang="en"> <!-- Specify language for browser-->
 
 <head> <!-- HTML document header -->
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/events.css">
     <title>Karmine Corp - Events</title> <!-- Tells the browser what title you give your page -->
     <script type="text/javascript" src="../js/events.js" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,7 +21,7 @@
         </nav>
     </header>
     
-    <h2>Event Sign-Up Form</h2>
+    <h2 style="text-align: center;">Event Sign-Up Form</h2>
     <form id="dataForm">
         <div>
             <label for="firstName">First Name:</label>
@@ -41,21 +41,37 @@
         </div>
         <div>
             <label>Events:</label>
-            <div>
+            <div class="event">
                 <input type="checkbox" id="event1" name="event1" value="true" required>
-                <label for="event1">Event 1</label>
+                <label for="event1">KCX 4 - FOREVER RIVALS</label>
+                <div class="event-info">
+                    <img src="../img/kcx4.webp" alt="KCX 4 Image">
+                    Day of showmatches between KCorp teams and Spanish adversaries. <br> November 9th 2024.
+                </div>
             </div>
-            <div>
+            <div class="event">
                 <input type="checkbox" id="event2" name="event2" value="true">
-                <label for="event2">Event 2</label>
+                <label for="event2">Valorant Champions Tour</label>
+                <div class="event-info">
+                    <img src="../img/vct.jpg" alt="Valorant Champions Tour Image">
+                    Follow KC Valorant in the European Valorant circuit.
+                </div>
             </div>
-            <div>
+            <div class="event">
                 <input type="checkbox" id="event3" name="event3" value="true">
-                <label for="event3">Event 3</label>
+                <label for="event3">League of Legends EMEA Championship</label>
+                <div class="event-info">
+                    <img src="../img/lec.jpg" alt="League of Legends EMEA Championship Image">
+                    Follow KC lec in the European League of Legend circuit.
+                </div>
             </div>
-            <div>
+            <div class="event">
                 <input type="checkbox" id="event4" name="event4" value="true">
-                <label for="event4">Event 4</label>
+                <label for="event4">EVO 2024</label>
+                <div class="event-info">
+                    <img src="../img/evo.avif" alt="EVO 2024 Image">
+                    Follow Kurama in the world's largest fighting game tournament.
+                </div>
             </div>
         </div>
         <button type="submit">Submit</button>
