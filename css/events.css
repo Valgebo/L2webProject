@@ -234,6 +234,7 @@ form button:hover {
 }
 .event-info{
     text-align: center;
+    margin-left: 20px;
 }
 .event-info img {
     max-width: 560px;
