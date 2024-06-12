@@ -18,6 +18,12 @@ footer{
     padding : 10px 0;
     text-align: center;
     background-image: url(https://img.freepik.com/photos-gratuite/mur-briques-bleues_23-2148261968.jpg) ;
+    
+}
+
+#footer_special {
+    position:fixed;
+    bottom:0;
 }
 
 header div {
